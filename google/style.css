@@ -134,11 +134,11 @@ body.home  {
 	box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
 }
 
-.home footer.home_footer {
+.home footer.home_foot {
 	background: #f2f2f2;
 }
 
-.home footer.home_footer h4 {
+.home footer.home_foot h4 {
 	color: rgba(0,0,0, 0.54);
 	font-size: 15px;
 	line-height: 43px;
@@ -147,7 +147,7 @@ body.home  {
 	border: 1px solid #eee;
 }
 
-.home footer.home_footer a {
+.home footer.home_foot a {
 	color: rgba(0,0,0, 0.54);
 	display: inline-block;
 	padding: 12px 11.3px;
@@ -155,7 +155,7 @@ body.home  {
 	
 }
 
-.home footer.home_footer a:hover {
+.home footer.home_foot a:hover {
 	text-decoration: underline;
 }
 
