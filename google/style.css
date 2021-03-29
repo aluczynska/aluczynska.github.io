@@ -58,11 +58,11 @@ body.home  {
 	cursor: pointer;
 }
 
-.home .search {
-	flex: 1; /*każdy element zajmuje 1 jednostkę przestrzeni wzdłuż osi*/
+.home .glowna {
+	flex: 1; 
 }
 
-.home .search .logo {
+.home .glowna .logo {
 	width: 272px;
 	height: 92px;
 	display: block;
@@ -70,7 +70,7 @@ body.home  {
 	margin-top: 75px;
 }
 
-.home .search_elements {
+.home .elementy {
 	width: 580px;
 	margin: 0px auto;
 	position: relative;
@@ -78,7 +78,7 @@ body.home  {
 	text-align: center;
 }
 
-.home .search_elements .search_input {
+.home .elementy .input {
 	display: block;
 	border: 1px solid #ddd;
 	font-size: 16px;
@@ -91,12 +91,12 @@ body.home  {
 	cursor: auto;
 }
 
-.home .search_elements .search_input:hover {
+.home .elementy .input:hover {
 	border: 1px solid #fff;
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
 }
 
-.home .search_elements .search_icon {
+.home .elementy .search_icon {
 	width: 20px;
 	opacity: .4;
 	position: absolute;
@@ -104,7 +104,7 @@ body.home  {
 	left: 14px;
 }
 
-.home .search_elements .search_voice {
+.home .elementy .search_voice {
 	width: 23px;
 	position: absolute;
 	top: 13px;
@@ -112,7 +112,7 @@ body.home  {
 	cursor: pointer;
 }
 
-.home .search_elements .search_button {
+.home .elementy .search_button {
 	border: 1px solid #f8f9fa;
 	padding: 9px 15px;
 	background-color: #f8f9fa;
@@ -130,7 +130,7 @@ body.home  {
 	transition: border-color 100ms;
 }
 
-.home .search_elements .search_button:hover {
+.home .elementy .search_button:hover {
 	box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
 }
 
