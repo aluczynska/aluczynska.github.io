@@ -328,7 +328,7 @@
 		background: #f2f2f2;
 		width: 100%;
 		padding: 10px;
-		border-top: 1px solid rgb(209, 209, 209);
+		border-top: 1px solid #dadce0;
 		font-size: 14px;
 	}
 	
@@ -368,7 +368,7 @@
 	}
 
 	.results .localization {
-		border-bottom: 1px solid rgb(190, 190, 190);
+		border-bottom: 1px solid #dadce0;
 	}
 	
 	.results .footer li a {
