@@ -96,7 +96,7 @@ body.home  {
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
 }
 
-.home .elementy .search_icon {
+.home .elementy .icon {
 	width: 20px;
 	opacity: .4;
 	position: absolute;
@@ -104,7 +104,7 @@ body.home  {
 	left: 14px;
 }
 
-.home .elementy .search_voice {
+.home .elementy .voice {
 	width: 23px;
 	position: absolute;
 	top: 13px;
