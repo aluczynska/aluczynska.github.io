@@ -78,7 +78,7 @@ body.home  {
 	text-align: center;
 }
 
-.home .elementy .input {
+.home .elementy .glownainput {
 	display: block;
 	border: 1px solid #ddd;
 	font-size: 16px;
@@ -91,12 +91,12 @@ body.home  {
 	cursor: auto;
 }
 
-.home .elementy .input:hover {
+.home .elementy .glownainput:hover {
 	border: 1px solid #fff;
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
 }
 
-.home .elementy .icon {
+.home .elementy .glownaicon {
 	width: 20px;
 	opacity: .4;
 	position: absolute;
@@ -104,7 +104,7 @@ body.home  {
 	left: 14px;
 }
 
-.home .elementy .voice {
+.home .elementy .glownavoice {
 	width: 23px;
 	position: absolute;
 	top: 13px;
