@@ -134,11 +134,11 @@ body.home  {
 	box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
 }
 
-.home footer.home_futter {
+.home footer.home_footer {
 	background: #f2f2f2;
 }
 
-.home footer.home_futter h4 {
+.home footer.home_footer h4 {
 	color: rgba(0,0,0, 0.54);
 	font-size: 15px;
 	line-height: 43px;
@@ -147,7 +147,7 @@ body.home  {
 	border: 1px solid #eee;
 }
 
-.home footer.home_futter a {
+.home footer.home_footer a {
 	color: rgba(0,0,0, 0.54);
 	display: inline-block;
 	padding: 12px 11.3px;
@@ -155,7 +155,7 @@ body.home  {
 	
 }
 
-.home footer.home_futter a:hover {
+.home footer.home_footer a:hover {
 	text-decoration: underline;
 }
 
@@ -166,7 +166,7 @@ body.home  {
 	padding: 5px 0px;
 }
 
-.home .link_1 {
+.home .link1 {
 	padding-left: 18.7px;
 	flex: 1;
 	justify-content: flex-start;
@@ -174,19 +174,19 @@ body.home  {
     order: 1;
 }
 
-.home .link_2 {
+.home .link2 {
 	padding-left: 18.7px;
 	order: 2;
 	flex: 1;
 
 }
 
-.home .link_2 .leaf {
+.home .link2 .leaf {
 	height: 15px;
 	padding-right: 5px;
 }
 
-.home .link_3 {
+.home .link3 {
 	padding-right: 18.7px;
 	order: 3;
 	justify-content: flex-end;
