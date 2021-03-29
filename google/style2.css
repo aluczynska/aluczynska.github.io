@@ -20,18 +20,18 @@
 		vertical-align: top;
 	}
 
-	.results .accountOptions {
+	.results .accountopt {
 		display: inline;
 		float: right;
 		padding: 20px;
 		margin-top: 0px;
 	}
   
-	.results .accountOptions li {
+	.results .accountopt li {
 		padding: 10px;
 	}
 
-	.results .signIn {
+	.results .sign {
 		border: 1px solid #3478e7;
 		background: #3478e7;
 		color: #fff;
