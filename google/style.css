@@ -192,15 +192,3 @@ body.home  {
 	justify-content: flex-end;
 }
 
-.home .top_nav {
-	display: none;
-}
-.home .search_tools {
-	display: none;
-}
-.home .searchResults {
-	display: none;
-}
-.home .footer {
-	display: none;
-}
