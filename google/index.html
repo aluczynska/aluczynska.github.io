@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<script>
+    var app = new Vue({
+    el: '#app',
+    data: {
+    googleSearch: '',
+    }
+    });
+</script>
+<head>
+    <meta charset="utf-8">
+    <title>Szukaj w Google</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" :class="[googleSearch.length > 0 ? 'results' : 'home']">
+       <nav class="nav_tools">
+            <a href="#">Gmail</a>
+            <a href="#">Grafika</a>
+            <img src="menu.png" class="google_apps" role="button"></img>
+            <button>Zaloguj się</button>
+        </nav>
+        <section class="glowna">
+            <img src="google.png" class="logo">
+            <form>
+                <br><br>
+                <div class="elementy">
+                    <input v-model="googleSearch" type="text" class="glownainput"/>
+                    <img src="search.png" class="glownaicon"/>
+                    <img src="mikrofon.png" class="glownavoice"/>
+                    <input type="button" class="search_button" value="Sukaj w google" z/>
+                    <input type="button" class="search_button" value="Szczęśliwy traf"/>
+                </div>
+            </form>
+        </section>
+        <footer class="home_foot">
+            <h4>Polska</h4>
+            <div class="links">
+                <div class="link1">
+                    <a href="#">O nas</a>
+                    <a href="#">Reklamuj się</a>
+                    <a href="#">Dla firm</a>
+                    <a href="#">Jak działa wyszukiwarka</a>
+                </div>
+                <div class="link2">
+                    <a href="#"><img src="lisc.png" class="leaf">Nautralność węglowa od 2007 roku</a>
+                </div>
+                <div class="link3">
+                    <a href="#">Prywatność</a>
+                    <a href="#">Warunki</a>
+                    <a href="#">Ustawienia</a>
+                </div>
+            </div>
+        </footer>
+        <div class="top_nav">
+
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="">
+
+            <ul class="accountopt">
+                <li><a href="#"><img src="menu.png" class="google_apps" role="button"></a></li>
+                <li><button class="sign" type="button" name="button">Zaloguj się</button></li>
+            </ul>
+            <div class="search_tools">
+
+                <div class="search_elem">
+                    <input type="text" value="">
+                    <img src="lupa.png" class="search_icon">
+                    <img src="mikrofon.png" class="search_voice">
+                    <img src="klawiatura.png" class="search_keyboard">
+                    <div class="line"></div>
+                    <img src="x.png" class="search_x">
+                </div>
+                <ul class="search_options">
+                    <li class="left active"><a href="#">Wszystko</a></li>
+                    <li class="left"><a href="#">Wiadomości</a></li>
+                    <li class="left"><a href="#">Grafika</a></li>
+                    <li class="left"><a href="#">Wideo</a></li>
+                    <li class="left"><a href="#">Mapy</a></li>
+                    <li class="left"><a href="#">Więcej</a></li>
+                    <li class="right"><a class="tools" href="#">Narzędzia</a></li>
+                    <li class="right"><a href="#">Ustawienia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="searchResults">
+            <p class="results_number">Około 9 540 000 000 wyników (0,43 s)</p>
+            <div class="result">
+                <a class="link" href="#">www.filmweb.pl › film › Coś-1982-4713</a><button>▼</button>
+                <h2><a href="#">Coś (1982) - Filmweb</a></h2>
+                <p>Coś (1982) The Thing - W odciętej od świata bazie badawczej na Antarktydzie coś morduje naukowców.</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">pl.wiktionary.org › wiki › coś</a><button>▼</button>
+                <h2><a href="#">coś – Wikisłownik, wolny słownik wielojęzyczny</a></h2>
+                <p>wymowa: IPA: [ʦ̑ɔɕ], AS: [coś] ​ · ​. znaczenia: zaimek nieokreślony. (1.1) …zastępujący nazwę dowolnego przedmiotu lub faktu, której mówiący nie chce ...</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">www.pozycjonusz.pl › rodzaje-wynikow-wyszukiwania...</a><button>▼</button>
+                <h2><a href="#">Rodzaje wyników wyszukiwania Google - ponad 20 ...</a></h2>
+                <p>7) Wewnętrzna wyszukiwarka. Rodzaje wyników wyszukiwania Google wzbogacono jakiś czas temu o funkcję wewnętrznej wyszukiwarki. To rozwiązanie, bez ...</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">www.olx.pl › Wszystkie ogłoszenia › Zwierzęta</a><button>▼</button>
+                <h2><a href="#">Koty, kocięta, kociaki sprzedam, oddam Ogłoszenia OLX.pl</a></h2>
+                <p>>Koty z hodowli i ze schronisk, na sprzedaż i za darmo.</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">www.filmweb.pl › film › Coś-1982-4713</a><button>▼</button>
+                <h2><a href="#">Coś (1982) - Filmweb</a></h2>
+                <p>Coś (1982) The Thing - W odciętej od świata bazie badawczej na Antarktydzie coś morduje naukowców.</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">pl.wiktionary.org › wiki › coś</a><button>▼</button>
+                <h2><a href="#">coś – Wikisłownik, wolny słownik wielojęzyczny</a></h2>
+                <p>wymowa: IPA: [ʦ̑ɔɕ], AS: [coś] ​ · ​. znaczenia: zaimek nieokreślony. (1.1) …zastępujący nazwę dowolnego przedmiotu lub faktu, której mówiący nie chce ...</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">www.pozycjonusz.pl › rodzaje-wynikow-wyszukiwania...</a><button>▼</button>
+                <h2><a href="#">Rodzaje wyników wyszukiwania Google - ponad 20 ...</a></h2>
+                <p>7) Wewnętrzna wyszukiwarka. Rodzaje wyników wyszukiwania Google wzbogacono jakiś czas temu o funkcję wewnętrznej wyszukiwarki. To rozwiązanie, bez ...</p>
+            </div>
+            <div class="result">
+                <a class="link" href="#">www.olx.pl › Wszystkie ogłoszenia › Zwierzęta</a><button>▼</button>
+                <h2><a href="#">Koty, kocięta, kociaki sprzedam, oddam Ogłoszenia OLX.pl</a></h2>
+                <p>>Koty z hodowli i ze schronisk, na sprzedaż i za darmo.</p>
+            </div>
+            <br>
+            <div class="related_results">
+                <h2>Wyszukiwania podobne do: coś wynik google</h2>
+                <table>
+                    <tr>
+                        <td>Wyniki wyszukiwania</td>
+                        <td>Wyniki wyszukiwania</td>
+                    </tr>
+                    <tr>
+                        <td>Wyniki wyszukiwania</td>
+                        <td>Wyniki wyszukiwania</td>
+                    </tr>
+                    <tr>
+                        <td>Wyniki wyszukiwania</td>
+                        <td>Wyniki wyszukiwania</td>
+                    </tr>
+                    <tr>
+                        <td>Wyniki wyszukiwania</td>
+                        <td>Wyniki wyszukiwania</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+            <table class="pages">
+                <tr>
+                    <td><span class="blue">G</span></td>
+                    <td><span class="red">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="yellow">o</span></td>
+                    <td><span class="blue">g</span></td>
+                    <td><span class="green">l</span></td>
+                    <td><span class="red">e</span></td>
+                    <td rowspan="2" style="width: 10px;"></td>
+                    <td><span class="blue arrow">></span></td>
+                </tr>
+                <tr>
+                    <td class="page_nr"></td>
+                    <td class="page_nr" style="color: black; cursor: text;">1</td>
+                    <td class="page_nr">2</td>
+                    <td class="page_nr">3</td>
+                    <td class="page_nr">4</td>
+                    <td class="page_nr">5</td>
+                    <td class="page_nr">6</td>
+                    <td class="page_nr">7</td>
+                    <td class="page_nr">8</td>
+                    <td class="page_nr">9</td>
+                    <td class="page_nr">10</td>
+                    <td colspan="3"></td>
+                    <td class="page_nr">Następna</td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <div class="localization">
+                <p>
+                    <a class="country">Polska</a>
+                    <a class="loc"><strong>Kraków</strong>  -  Z Twojego adresu internetowego </a>
+                    <a class="loc_more">- Użyj dokładnej lokalizacji</a><a class="loc_more">  -  Dowiedz się więcej</a>
+                </p>
+            </div>
+            <ul>
+                <li><a href="#">Pomoc</a></li>
+                <li><a href="#">Prześlij opinię</a></li>
+                <li><a href="#">Prywatność</a></li>
+                <li><a href="#">Warunki</a></li>
+            </ul>
+        </div>
+        </div>
+</body>
+</html>
