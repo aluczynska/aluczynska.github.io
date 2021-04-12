@@ -1,3 +1,7 @@
+body {
+	padding: 0;
+	margin: 0;
+}
 .home * {
 	padding: 0;
 	margin: 0;
@@ -157,10 +161,7 @@ div.home {
 		.home footer.home_foot a:hover {
 			text-decoration: underline;
 		}
-body {
-	padding: 0;
-	margin: 0;
-}
+
 .home .links {
 	border-top: 1px solid #ddd;
 	display: flex;
