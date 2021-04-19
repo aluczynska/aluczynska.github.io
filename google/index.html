@@ -23,7 +23,7 @@
             <form>
                 <br><br>
                 <div class="elementy">
-                    <input v-model="googleSearch" type="text" class="glownainput"/>
+                    <input ref="first" v-model="googleSearch" type="text" class="glownainput"/>
                     <img src="search.png" class="glownaicon"/>
                     <img src="mikrofon.png" class="glownavoice"/>
                     <input type="button" class="search_button" value="Sukaj w google"/>
@@ -61,7 +61,7 @@
             <div class="search_tools">
 
                 <div class="search_elem">
-                    <input type="text" value="">
+                    <input ref="second" type="text" v-model="googleSearch">
                     <img src="lupa.png" class="search_icon">
                     <img src="mikrofon.png" class="search_voice">
                     <img src="klawiatura.png" class="search_keyboard">
@@ -82,6 +82,14 @@
         </div>
         <div class="searchResults">
             <p class="results_number">Około 9 540 000 000 wyników (0,43 s)</p>
+            <div class="cities">	
+          <a class="link">Miasta zawierające frazę "{{googleSearch}}":</a>	
+          <ul>	
+            <li v-for="city in filteredCities">	
+              {{ city.name }}	
+            </li>	
+          </ul>	
+        </div>
             <div class="result">
                 <a class="link" href="#">www.filmweb.pl › film › Coś-1982-4713</a><button>▼</button>
                 <h2><a href="#">Coś (1982) - Filmweb</a></h2>
@@ -215,7 +223,6 @@
         return result;
       }
     },
-
     updated() {
         this.$nextTick(() => {
 
