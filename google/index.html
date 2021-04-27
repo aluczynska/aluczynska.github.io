@@ -28,8 +28,7 @@
                     <div class="bottom_border"></div>	
                 <div class="list">	
                   <ul v-for="city in filteredCities" v-on:click="update_input(city.name)">	
-                    <li>	
-                      <!-- {{city.name}} -->	
+                    <li>		
                       <b>{{ city.name.substring(0, city.name.indexOf(googleSearch[0])) }}</b>{{googleSearch}}<b>{{ city.name.substring(googleSearch.length + (city.name.substring(0, city.name.indexOf(googleSearch[0]))).length) }}</b>	
                     </li>	
                   </ul>	
@@ -93,14 +92,7 @@
         </div>
         <div class="searchResults">
             <p class="results_number">Około 9 540 000 000 wyników (0,43 s)</p>
-            <!--<div class="cities">	
-          <a>Miasta zawierające frazę "{{googleSearch}}":</a>	
-          <ul>	
-            <li v-for="city in filteredCities">	
-              {{ city.name }}	
-            </li>	
-          </ul>	
-        </div>-->
+
             <div class="result">
                 <a class="link" href="#">www.filmweb.pl › film › Coś-1982-4713</a><button>▼</button>
                 <h2><a href="#">Coś (1982) - Filmweb</a></h2>
@@ -259,15 +251,7 @@
     },	
     	
   },	
-    // updated() {	
-    //     this.$nextTick(() => {	
-    //     if (this.googleSearch.length > 0) {	
-    //     this.$refs.second.focus();	
-    //     } else {	
-    //     this.$refs.first.focus();	
-    //     }	
-    //   })	
-    // }	
+    	
 });	
 </script>
 </html>
