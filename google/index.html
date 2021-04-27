@@ -23,7 +23,7 @@
             <form>
                 <br><br>
                 <div class="elementy">
-                    <div class="dropdown_content">
+                    <div class="lista">
                     <input ref="first" v-model="googleSearch" type="text" class="glownainput"/>
                     <div class="bottom_border"></div>	
                 <div class="list">	
@@ -247,7 +247,7 @@
     },	
     update_input: function (name){	
           this.googleSearch = name;	
-          this.change_page(); //automatyczne przekierowanie po kliknieciu	
+          this.change_page();
     },	
     	
   },	
