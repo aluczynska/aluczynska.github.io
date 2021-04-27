@@ -96,10 +96,6 @@ div.home {
 		cursor: auto;
 	}
 
-		/*.home .elementy .glownainput:hover {
-			border: 1px solid #fff;
-			box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);
-		}*/
 	.home .bottom_border{	
 	border-bottom: 1px solid #ddd;	
 	width: 94%;	
@@ -217,7 +213,7 @@ div.home {
 }	
 .home .dropdown_content .list li{	
 	list-style: none;	
-	background-image: url('images_google/search_icon.png');	
+	background-image: url('search.png');	
 	background-repeat: no-repeat;	
 	background-position: left center;	
 	background-size: 20px;	
