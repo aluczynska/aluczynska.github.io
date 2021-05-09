@@ -15,7 +15,9 @@ div.home {
 	flex-direction: column;
 	min-height: 100vh;
 }
-
+.home .thin {	
+	font-weight: 500;	
+}
 .home nav.nav_tools {
 	display: flex;
 	align-items: center;
@@ -211,9 +213,7 @@ div.home {
 	border: 1px solid #fff;	
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);	
 }	
-.home .thin {	
-	font-weight: 500;	
-}
+
 .home .lista .list li{	
 	list-style: none;	
 	background-image: url('search.png');	
@@ -224,10 +224,8 @@ div.home {
 	text-align: left;	
 	padding: 7px 5px 7px 30px;	
 }	
-	/* .home .lista .list li:hover{	
-	background-color: rgb(240, 240, 240);	
-} */	
-.home .lista .list li.grey_content  {	
+
+.home .lista .list li.greyspace  {	
 	background-color: rgb(240, 240, 240);	
 }
 
