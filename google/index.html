@@ -213,14 +213,17 @@
   var app = new Vue({	
     el: '#app',	
     data: {	
-      list_counter: -1,	
-      foc: true,
       selected_city: '',	
       googleSearch: '',	
       googleSearch_temp: '',	
-      cities_update: true,
+      cities_update: true,	
       change_class: 0,	
       cities: window.cities,	
+      list_counter: -1,	
+      foc: true,
+    },	
+    computed: {	
+
     },	
     watch: {	
       list_counter: function(){	
@@ -239,8 +242,9 @@
             this.createFilteredCities(true);     	
           }	
         }	
-      },
- methods: {	
+      },	
+    },	
+    methods: {	
     createFilteredCities(bool){	
         if(bool){	
           let result = this.cities.filter(city => city.name.includes(this.googleSearch));	
@@ -282,15 +286,7 @@
         this.change_page();	
       }	
     },	
-  pogrubienie(input_city){	
-    let regex = new RegExp(this.googleSearch_temp, "gi");	
-    let bold = "<b>" + 	
-      input_city.name.replace(regex, match =>	
-          {return "<span class='thin'>"+ match +"</span>";}) 	
-              + "</b>";	
-      return bold;	
-  },
-      upKey() {	
+    upKey() {	
       if(this.list_counter > -1){	
         this.list_counter -= 1;	
       }	
@@ -305,8 +301,25 @@
       else if(this.list_counter == this.filteredCities.length - 1){	
         this.list_counter = -1;	
       }	
-    }
-  }    	
-});	
+    },	
+  pogrubienie(input_city){	
+    let regex = new RegExp(this.googleSearch_temp, "gi");	
+    let bold = "<b>" + 	
+      input_city.name.replace(regex, match =>	
+          {return "<span class='thin'>"+ match +"</span>";}) 	
+              + "</b>";	
+      return bold;	
+  }	
+  }	
+    // updated() {	
+    //     this.$nextTick(() => {	
+    //     if (this.googleSearch.length > 0) {	
+    //     this.$refs.second.focus();	
+    //     } else {	
+    //     this.$refs.first.focus();	
+    //     }	
+    //   })	
+    // }	
+});
 </script>
 </html>
