@@ -24,11 +24,11 @@
                 <br><br>
                 <div class="elementy">
                     <div class="lista">
-                    <input @focus="focused" ref="first" v-model="googleSearch" type="text" class="glownainput" v-on:keyup.down="downKey" v-on:keyup.up="upKey" v-on:keyup.enter="enterKey"/>
+                    <input ref="first" v-model="googleSearch" type="text" class="glownainput" @focus="focused" v-on:keyup.down="downKey" v-on:keyup.up="upKey" v-on:keyup.enter="enterKey"/>
                     <div class="bottom_border"></div>	
                 <div class="list">	
                   <ul v-for="(city, index) in filteredCities" v-on:click="update_input(city.name)">	
-                    <li :class="{greyspace: index == list_counter}">		
+                    <li :class="{greyspace: index == in_focus}">		
                        <a v-on:click="choose(index)" v-html="bolderize(city)">{{ city }}</a>	
                     </li>	
                   </ul>	
@@ -213,7 +213,7 @@
   var app = new Vue({	
     el: '#app',	
     data: {	
-      list_counter: -1,	
+      in_focus: -1,	
       focused: true,
       selected_city: '',	
       googleSearch: '',	
@@ -223,9 +223,9 @@
       cities: window.cities,		
     },		
     watch: {	
-      list_counter: function(){	
+      in_focus: function(){	
         this.cities_update = false;	
-        this.googleSearch = this.filteredCities[this.list_counter].name;	
+        this.googleSearch = this.filteredCities[this.in_focus].name;	
       },	
       googleSearch: function(){	
         if(this.googleSearch.length == 0){	
@@ -234,7 +234,7 @@
         else{	
           this.createFilteredCities(this.cities_update);	
           this.cities_update=true;	
-          if(this.list_counter == -1){	
+          if(this.in_focus == -1){	
             this.googleSearch_temp = this.googleSearch; 	
             this.createFilteredCities(true);     	
           }	
@@ -251,7 +251,7 @@
           else{	
             this.filteredCities = result;	
           }	
-        this.list_counter = -1;	
+        this.in_focus = -1;	
            	
       }	
     },	
@@ -273,30 +273,30 @@
         this.googleSearch = this.filteredCities[i].name;	
     },	
     enterKey() {	
-      if(this.list_counter != -1){ 	
-        this.googleSearch = this.filteredCities[this.list_counter].name	
-        this.list_counter = -1;	
+      if(this.in_focus != -1){ 	
+        this.googleSearch = this.filteredCities[this.in_focus].name	
+        this.in_focus = -1;	
         this.change_page();	
-        this.foc = false;	
+        this.focused = false;	
       }	
       else{	
         this.change_page();	
       }	
     },	
     upKey() {	
-      if(this.list_counter > -1){	
-        this.list_counter -= 1;	
+      if(this.in_focus > -1){	
+        this.in_focus -= 1;	
       }	
-      else if(this.list_counter == 0){	
-        this.list_counter = this.filteredCities.length - 1;	
+      else if(this.in_focus == 0){	
+        this.in_focus = this.filteredCities.length - 1;	
       }	
     },	
     downKey() {	
-      if(this.list_counter < this.filteredCities.length - 1){	
-        this.list_counter += 1;	
+      if(this.in_focus < this.filteredCities.length - 1){	
+        this.in_focus += 1;	
       }	
-      else if(this.list_counter == this.filteredCities.length - 1){	
-        this.list_counter = -1;	
+      else if(this.in_focus == this.filteredCities.length - 1){	
+        this.in_focus = -1;	
       }	
     },	
   bolderize(input_city){	
