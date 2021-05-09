@@ -138,9 +138,9 @@ div.home {
 		transition: border-color 100ms;
 	}
 
-		.home .elementy .search_button:hover {
-			box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
-		}
+.home .elementy .search_button:hover {
+	box-shadow: 0 0 3px rgba(172, 172, 172, 0.822);
+}
 
 .home footer.home_foot {
 	background: #f2f2f2;
@@ -211,6 +211,9 @@ div.home {
 	border: 1px solid #fff;	
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);	
 }	
+.home .thin {	
+	font-weight: 500;	
+}
 .home .lista .list li{	
 	list-style: none;	
 	background-image: url('search.png');	
@@ -221,7 +224,10 @@ div.home {
 	text-align: left;	
 	padding: 7px 5px 7px 30px;	
 }	
-.home .lista .list li:hover{	
+	/* .home .lista .list li:hover{	
+	background-color: rgb(240, 240, 240);	
+} */	
+.home .lista .list li.grey_content  {	
 	background-color: rgb(240, 240, 240);	
 }
 
