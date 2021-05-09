@@ -24,12 +24,12 @@
                 <br><br>
                 <div class="elementy">
                     <div class="lista">
-                    <input @focus="foc" ref="first" v-model="googleSearch" type="text" class="search_input" v-on:keyup.down="down" v-on:keyup.up="up" v-on:keyup.enter="enter"/>
+                    <input @focus="foc" ref="first" v-model="googleSearch" type="text" class="search_input" v-on:keyup.down="downKey" v-on:keyup.up="upKey" v-on:keyup.enter="enterKey"/>
                     <div class="bottom_border"></div>	
                 <div class="list">	
                   <ul v-for="(city, index) in filteredCities" v-on:click="update_input(city.name)">	
                     <li :class="{grey: index == list_counter}">	
-                        <a v-on:click="choose(index)" v-html="bold(city)">{{ city }}</a>
+                        <a v-on:click="choose(index)" v-html="pogrubienie(city)">{{ city }}</a>
                     </li>	
                   </ul>	
                 </div>	
@@ -265,13 +265,13 @@
     },	
     update_input(name){	
         this.googleSearch = name;	
-        this.change_page(); //automatyczne przekierowanie po kliknieciu	
+        this.change_page(); 
     },	
         	
     choose(i){	
         this.googleSearch = this.filteredCities[i].name;	
     },	
-    enter() {	
+    enterKey() {	
       if(this.list_counter != -1){ 	
         this.googleSearch = this.filteredCities[this.list_counter].name	
         this.list_counter = -1;	
@@ -282,7 +282,7 @@
         this.change_page();	
       }	
     },	
-  bold(input_city){	
+  pogrubienie(input_city){	
     let regex = new RegExp(this.googleSearch_temp, "gi");	
     let bold = "<b>" + 	
       input_city.name.replace(regex, match =>	
@@ -290,7 +290,7 @@
               + "</b>";	
       return bold;	
   },
-      up() {	
+      upKey() {	
       if(this.list_counter > -1){	
         this.list_counter -= 1;	
       }	
@@ -298,14 +298,14 @@
         this.list_counter = this.filteredCities.length - 1;	
       }	
     },	
-    down() {	
+    downKey() {	
       if(this.list_counter < this.filteredCities.length - 1){	
         this.list_counter += 1;	
       }	
       else if(this.list_counter == this.filteredCities.length - 1){	
         this.list_counter = -1;	
       }	
-    },	
+    }
   }    	
 });	
 </script>
