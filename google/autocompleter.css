@@ -1,0 +1,25 @@
+.home .lista {	
+	border: 1px solid #ddd;	
+	border-radius: 25px;	
+	outline: none;	
+	cursor: auto;	
+}	
+.home .lista:hover {	
+	border: 1px solid #fff;	
+	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);	
+}	
+
+.home .lista .list li{	
+	list-style: none;	
+	background-image: url('search.png');	
+	background-repeat: no-repeat;	
+	background-position: left center;	
+	background-size: 20px;	
+	margin: 0 15px 0 15px;	
+	text-align: left;	
+	padding: 7px 5px 7px 30px;	
+}	
+
+.home .lista .list li.greyspace  {	
+	background-color: rgb(240, 240, 240);	
+}
