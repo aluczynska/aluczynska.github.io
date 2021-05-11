@@ -6,6 +6,7 @@
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="autocompleter.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="cities.js"></script>
 </head>
@@ -23,17 +24,7 @@
             <form>
                 <br><br>
                 <div class="elementy">
-                    <div class="lista">
-                    <input ref="first" v-model="googleSearch" type="text" class="glownainput" @focus="focused" v-on:keyup.down="downKey" v-on:keyup.up="upKey" v-on:keyup.enter="enterKey"/>
-                    <div class="bottom_border"></div>	
-                <div class="list">	
-                  <ul v-for="(city, index) in filteredCities" v-on:click="update_input(city.name)">	
-                    <li :class="{greyspace: index == in_focus}">		
-                       <a v-on:click="choose(index)" v-html="bolderize(city)">{{ city }}</a>	
-                    </li>	
-                  </ul>	
-                </div>	
-              </div>	
+                    
                 <img src="search.png" class="glownaicon"/>
                     <img src="mikrofon.png" class="glownavoice"/>
                     <input v-on:click="change_page" type="button" class="search_button" value="Sukaj w google"/>
