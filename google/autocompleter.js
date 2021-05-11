@@ -1,0 +1,1 @@
+Vue.component('v-autocompleter', {})
