@@ -1,3 +1,16 @@
+.home .elementy .glownainput {
+		display: block;
+		border: 1px solid rgb(255, 255, 255);
+		width: 50%;
+		font-size: 16px;
+		padding: 13px;
+		padding-left: 45px;
+		border-radius: 25px;
+		width: 100%;
+		transition: box-shadow 100ms;
+		outline: none;
+		cursor: auto;
+	}
 .home .lista {	
 	border: 1px solid #ddd;	
 	border-radius: 25px;	
