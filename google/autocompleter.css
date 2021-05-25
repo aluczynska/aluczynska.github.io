@@ -1,4 +1,4 @@
-.home .elementy .glownainput {
+.elementy .glownainput {
 		display: block;
 		border: 1px solid rgb(255, 255, 255);
 		width: 50%;
@@ -11,18 +11,18 @@
 		outline: none;
 		cursor: auto;
 	}
-.home .lista {	
+.vue-autocompleter {	
 	border: 1px solid #ddd;	
 	border-radius: 25px;	
 	outline: none;	
 	cursor: auto;	
 }	
-.home .lista:hover {	
+.vue-autocompleter:hover {	
 	border: 1px solid #fff;	
 	box-shadow: 0 0 5px rgba(172, 172, 172, 0.822);	
 }	
 
-.home .lista .list li{	
+.vue-autocompleter .list li{	
 	list-style: none;	
 	background-image: url('search.png');	
 	background-repeat: no-repeat;	
@@ -33,6 +33,6 @@
 	padding: 7px 5px 7px 30px;	
 }	
 
-.home .lista .list li.greyspace  {	
+.vue-autocompleter .list li.greyspace  {	
 	background-color: rgb(240, 240, 240);	
 }
