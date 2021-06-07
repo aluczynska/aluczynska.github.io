@@ -236,11 +236,11 @@
           this.filteredCities = '';	
         }	
         else{	
-          this.createFilteredCities(this.cities_update);	
+          this.findResultsDebounced();	
           this.cities_update=true;	
           if(this.in_focus == -1){	
             this.googleSearch_temp = this.googleSearch; 	
-            this.createFilteredCities(true);     	
+            this.findResultsDebounced();     	
           }	
         }	
       },	
@@ -310,7 +310,16 @@
           {return "<span class='thin'>"+ match +"</span>";}) 	
               + "</b>";	
       return bold;	
-  }	
+  },	
+    findResultsDebounced : Cowboy.debounce(100, function findResultsDebounced() {
+    console.log('Fetch: ', this.googleSearch)
+    fetch(`http://localhost/search?name=${this.googleSearch}`)
+        .then(resp => {resp.json();
+        console.log(resp.headers.get('Content-Type'));})
+        .then(data => {
+            console.log('Data: ', data);
+            this.filteredCities = data;
+        }
   }	
 });	
 </script>
